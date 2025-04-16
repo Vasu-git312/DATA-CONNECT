@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - My Portfolio</title>
+    <style>
+      /* Import fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+      /* CSS Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #df3b3b;
+        --primary-dark: #cb2929;
+        --secondary: #ff5d5d;
+        --dark: #212121;
+        --light: #f5fbf4;
+        --gray: #6d6c7d;
+        --success: #28a745;
+        --transition: all 0.3s ease;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Header Styles */
+      header {
+        background: var(--primary);
+        color: #fff;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      header nav a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      header nav a:hover {
+        color: #fff;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Section Styles */
+      main section {
+        padding: 2rem;
+        margin: 1.5rem auto;
+        max-width: 800px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      h2 {
+        padding-bottom: 0.5rem;
+        font-size: 1.6rem;
+        color: var(--primary);
+        position: relative;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        border-bottom: 2px solid #eee;
+      }
+
+      /* Portfolio Section */
+      .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .portfolio-item {
+        padding: 1.5rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background: #fafafa;
+      }
+
+      .portfolio-item h3 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .portfolio-item p {
+        color: var(--gray);
+        font-size: 0.9rem;
+      }
+      
+      .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+      
+      .portfolio-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .portfolio-links a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        transition: var(--transition);
+      }
+      
+      .portfolio-links a:hover {
+        background: var(--primary-dark);
+      }
+
+      /* Footer Styles */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          padding: 1rem;
+        }
+        
+        header h1 {
+          margin-bottom: 1rem;
+        }
+        
+        header nav ul {
+          gap: 1rem;
+        }
+        
+        .portfolio-container {
+          grid-template-columns: 1fr;
+        }
+        
+        main section {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="identity.html">Identity</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Portfolio Section -->
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-container">
+          <div class="portfolio-item">
+            <img src="c1.jpg" alt="Project One Preview">
+            <h3>E-Commerce Website</h3>
+            <p>A fully responsive e-commerce platform built with React.js and Node.js. Features include user authentication, payment processing, and inventory management.</p>
+            <div class="portfolio-links">
+              <a href="#">Live Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <img src="c2.jpg" alt="Project Two Preview">
+            <h3>Task Management App</h3>
+            <p>A productivity tool that helps users organize tasks, set priorities, and track progress. Built with Vue.js and Firebase.</p>
+            <div class="portfolio-links">
+              <a href="#">Live Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <img src="c3.jpg" alt="Project Three Preview">
+            <h3>Travel Blog</h3>
+            <p>A responsive travel blog with a custom CMS for content management. Built with HTML, CSS, JavaScript, and PHP.</p>
+            <div class="portfolio-links">
+              <a href="#">Live Site</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <img src="c4.jpg" alt="Project Four Preview">
+            <h3>Weather Dashboard</h3>
+            <p>A weather application that displays current conditions and forecasts for locations worldwide. Utilizes OpenWeatherMap API.</p>
+            <div class="portfolio-links">
+              <a href="#">Live Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 My Portfolio VASU SONI 10502</p>
+    </footer>
+  </body>
+</html>

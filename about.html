@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - My Portfolio</title>
+    <style>
+      /* Import fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+      /* CSS Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #df3b3b;
+        --primary-dark: #cb2929;
+        --secondary: #ff5d5d;
+        --dark: #212121;
+        --light: #f5fbf4;
+        --gray: #6d6c7d;
+        --success: #28a745;
+        --transition: all 0.3s ease;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Header Styles */
+      header {
+        background: var(--primary);
+        color: #fff;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      header nav a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      header nav a:hover {
+        color: #fff;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Section Styles */
+      main section {
+        padding: 2rem;
+        margin: 1.5rem auto;
+        max-width: 800px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      h2 {
+        padding-bottom: 0.5rem;
+        font-size: 1.6rem;
+        color: var(--primary);
+        position: relative;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        border-bottom: 2px solid #eee;
+      }
+
+      /* About Section */
+      #about p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--gray);
+      }
+
+      /* Footer Styles */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          padding: 1rem;
+        }
+        
+        header h1 {
+          margin-bottom: 1rem;
+        }
+        
+        header nav ul {
+          gap: 1rem;
+        }
+        
+        main section {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="identity.html">Identity</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi there! I am a passionate developer with a knack for blending
+          creativity and technology. Explore my work and feel free to drop a
+          message!
+        </p>
+        
+        <!-- Extended about me content -->
+        <p>
+          With several years of experience in web development, I specialize in creating 
+          responsive, user-friendly websites and applications. My approach combines 
+          technical excellence with creative problem-solving to deliver outstanding results.
+        </p>
+        
+        <p>
+          I believe in continuous learning and staying updated with the latest technologies 
+          and industry trends. When I'm not coding, you can find me exploring new design 
+          concepts, contributing to open-source projects, or sharing knowledge with the 
+          developer community.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 My Portfolio VASU SONI 10502</p>
+    </footer>
+  </body>
+</html>
